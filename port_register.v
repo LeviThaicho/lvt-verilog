@@ -1,4 +1,6 @@
-module port_register #(parameter index_width = 8, parameter  data_width = 64, parameter processing_engines = 4) (
+module port_register #(parameter index_width = 8, 
+                       parameter  data_width = 64, 
+                       parameter processing_engines = 4) (
     input clk,
     input reset,
     input [data_width-1:0] write_in_kandv,
