@@ -14,6 +14,8 @@ wire [index_width-1:0] addr_wire [p-1:0];
 wire ren_wire[p-1:0];
 wire wen_wire[p-1:0];
 genvar i;
+genvar j;
+genvar k;
 //------------read write port instantiation---------//
 generate
     for(i=0; i<p; i+=1) begin
@@ -48,6 +50,17 @@ wire [p-1:0:] lvt_select ;
 
 //-----------------bram instantiation-------------/
 wire [value_width-1:0] value_wire [p*(p-1)-1:0][r-1:0];
+
+generate
+integer ct=0;
+    for(i=0;i<p;i=i+1)row
+        for(j=i+1;j<p;j=j+1)column
+            for(k=0;k<r;k=k+1)replication begin
+                  
+            end   
+
+endgenerate
+
 
 
 
